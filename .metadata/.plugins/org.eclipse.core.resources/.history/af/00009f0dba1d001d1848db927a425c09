@@ -1,0 +1,41 @@
+package atendimentoMedico;
+
+import java.util.Calendar;
+import java.util.Date;
+
+public class Pessoa {
+
+	private String nome;
+	
+	private Date dataNascimento;
+
+	public String getNome() {
+		return nome;
+	}
+
+	public void setNome(String nome) {
+		this.nome = nome;
+	}
+
+	public Date getDataNascimento() {
+		return dataNascimento;
+	}
+
+	public void setDataNascimento(Date dataNascimento) {
+		this.dataNascimento = dataNascimento;
+	}
+	
+	public static int calcularIdade() {
+		
+		 Calendar cHoje= Calendar.getInstance(Date dataNascimento);  
+		    
+		 Calendar hoje = Calendar.getInstance();
+		    int idade = hoje.get(Calendar.YEAR) - dataNascimento.year;
+		    // se ainda não chegou o aniversário, diminui 1 ano
+		    int mesAtual = hoje.get(Calendar.MONTH) + 1;
+		    if ((mesAtual == dataNascimento.month && hoje.get(Calendar.DAY_OF_MONTH) < dataNascimento.day)
+		        || mesAtual < dataNascimento.month) {
+		        idade--;
+		    }
+		    return idade;
+		}
