@@ -1,0 +1,11 @@
+package atendimentoMedico;
+
+public class Atendimento {
+	
+	private int prioridade;
+	
+	private int estado;
+	
+	
+
+}

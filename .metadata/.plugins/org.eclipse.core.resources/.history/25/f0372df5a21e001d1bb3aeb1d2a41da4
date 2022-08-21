@@ -1,0 +1,7 @@
+package atendimentoMedico;
+
+public class Main {
+
+	
+	Pessoa p = new Pessoa("João Vitor", 2003-02-21);
+}
