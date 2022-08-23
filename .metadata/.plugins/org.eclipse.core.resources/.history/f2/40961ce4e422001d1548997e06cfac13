@@ -75,8 +75,8 @@ public class Atendimento extends Operacao {
 		else if (prioridade == 4) {
 			System.out.println(prioridade + "- Cor Vermelha (Emergência)");
 		}
-		else {
-			System.out.println("Prioridade não cadastrada!");
+		else if (prioridade == 6) {
+			System.out.println(prioridade + "- prioridade não cadastrada.");
 		}
 	}
 

@@ -26,14 +26,6 @@ public class Atestado extends Operacao{
 		System.out.println("2 = Triagem.");
 		System.out.println("3 = Atendimento Médico");
 		System.out.println("Estado Atual: " + atendimento.getEstado());
-		System.out.println("Possíveis prioridades: ");
-		System.out.println("0 - Cor azul (Não Urgente)");
-		System.out.println("1 - Cor verde (Pouco Urgente)");
-		System.out.println("2 - Cor Amarela (Urgente)");
-		System.out.println("3 - Cor Laranja (Muito Urgente");
-		System.out.println("4 - Cor Vermelha (Emergência)");
-		
-	
 	}
 
 	@Override
