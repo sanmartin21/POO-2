@@ -1,7 +1,11 @@
 package atendimentoMedico;
 
+import java.text.ParseException;
+import java.text.SimpleDateFormat;
 import java.util.Calendar;
 import java.util.Date;
+import java.util.Locale;
+import java.util.concurrent.TimeUnit;
 
 public class Pessoa {
 
@@ -9,16 +13,14 @@ public class Pessoa {
 	
 	private Date dataNascimento;
 
-	public Pessoa(String nome, Date dataNascimento) {
-		setNome(nome);
-		setDataNascimento(dataNascimento);
-	}
+
 
 	public String getNome() {
 		return nome;
 	}
 
 	public void setNome(String nome) {
+		if(nome.length() > 0)
 		this.nome = nome;
 	}
 
@@ -30,32 +32,24 @@ public class Pessoa {
 		this.dataNascimento = dataNascimento;
 	}
 	
-	public int calcularIdade(Date dataNascimento) {
+	public int calcularIdade(String dataNascimento, String dataAtual) throws ParseException {
+		
+		SimpleDateFormat dateFormat = new SimpleDateFormat("MM/dd/yyyy", Locale.ENGLISH);
+		
+		Date dataAtuall = dateFormat.parse(dataAtual);
+		Date dataNascimentoo = dateFormat.parse(dataNascimento);
+		
+		long diferenca = dataAtuall.getTime() - dataNascimentoo.getTime();
+		
+		TimeUnit time = TimeUnit.DAYS;
+		
+		long diferencaEntreDatas = time.convert(diferenca, TimeUnit.MILLISECONDS);
+		
+		int tornaInteiro = Math.toIntExact(diferencaEntreDatas);
+		int idadePessoa = tornaInteiro/365;
+		
+		return idadePessoa;
 
-	    Calendar hoje = Calendar.getInstance();
-	    Calendar birthDate = Calendar.getInstance();
-
-	    int idade = 0;
-
-	    birthDate.setTime(dataNascimento);
-	    if (birthDate.after(hoje)) {
-	        throw new IllegalArgumentException("Não pode nascer no futuro");
-	    }
-
-	    idade = hoje.get(Calendar.YEAR) - birthDate.get(Calendar.YEAR);
-
-	    // Se a data de nascimento for maior que a data de hoje (após 2 dias de ajuste do ano bissexto), diminua a idade em um ano   
-	    if ( (birthDate.get(Calendar.DAY_OF_YEAR) - hoje.get(Calendar.DAY_OF_YEAR) > 3) ||
-	            (birthDate.get(Calendar.MONTH) > hoje.get(Calendar.MONTH ))){
-	        idade--;
-
-	     // Se a data de nascimento e a data de hoje forem do mesmo mês e o dia do mês de nascimento for maior que o dia do mês de hoje, diminua a idade
-	    }else if ((birthDate.get(Calendar.MONTH) == hoje.get(Calendar.MONTH )) &&
-	              (birthDate.get(Calendar.DAY_OF_MONTH) > hoje.get(Calendar.DAY_OF_MONTH ))){
-	        idade--;
-	    }
-
-	    return idade;
 	}
 
 	@Override
@@ -68,8 +62,6 @@ public class Pessoa {
 		builder.append("]");
 		return builder.toString();
 	}
-	
-	
-	
+	  	
 
 }

@@ -6,11 +6,22 @@ public class Medico extends Pessoa{
 	
 	protected Especialidade especialidade;
 	
-	public Medico(String nome, Date dataNascimento) {
-		super(nome, dataNascimento);
-		
+	public Medico(Especialidade especialidade, String nome, Date dataNascimento) {
+		setNome(nome);
+		setDataNascimento(dataNascimento);
 		especialidade = new Especialidade();
 	}
+	
+
+	public Especialidade getEspecialidade() {
+		return especialidade;
+	}
+
+
+	public void setEspecialidade(Especialidade especialidade) {
+		this.especialidade = especialidade;
+	}
+
 
 	@Override
 	public String toString() {
@@ -20,6 +31,9 @@ public class Medico extends Pessoa{
 		builder.append("]");
 		return builder.toString();
 	}
+
+
+	
 	
 	
 	

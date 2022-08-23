@@ -1,0 +1,25 @@
+package atendimentoMedico;
+
+public class Atestado {
+	
+	private int cid;
+
+	public int getCid() {
+		return cid;
+	}
+
+	public void setCid(int cid) {
+		this.cid = cid;
+	}
+	
+	
+	public boolean emitirAtestado(int atendimento) {
+		if (atendimento > 0) {
+			return true;
+		} else {
+			return false;
+		}
+
+	}
+
+}

@@ -1,0 +1,60 @@
+package atendimentoMedico;
+
+import java.util.ArrayList;
+import java.util.Collections;
+import java.util.Date;
+import java.util.EnumSet;
+import java.util.LinkedHashMap;
+import java.util.List;
+import java.util.Map;
+import java.util.concurrent.TimeUnit;
+
+public class Operacao {
+
+	private Date inicio;
+	private Date fim;
+	
+	
+	public Date getInicio() {
+		return inicio;
+	}
+	
+	public void setInicio(Date inicio) {
+		this.inicio = inicio;
+	}
+	
+	public Date getFim() {
+		return fim;
+	}
+	
+	public void setFim(Date fim) {
+		this.fim = fim;
+	}
+	
+	
+	public void tempoTotal(Date inicial, Date finall) {
+		
+		long difef= finall.getTime() - inicial.getTime();
+	
+
+		List<TimeUnit> unidades = new ArrayList<TimeUnit>(EnumSet.allOf(TimeUnit.class));
+	    Collections.reverse(unidades);
+
+	   
+	    Map<TimeUnit,Long> resultado = new LinkedHashMap<TimeUnit,Long>();
+	    long restoMilesimo = diff;
+
+	    for ( TimeUnit unidade : unidades ) {
+
+	    long diferenca = unidade.convert(restoMilesimo,TimeUnit.MILLISECONDS);
+	    long difMilesimosUnidade = unidade.toMillis(diferenca);
+	    restoMilesimo = restoMilesimo - difMilesimosUnidade;
+
+	    resultado.put(unidade,diferenca); 
+	    System.out.println(diferenca + " " + unidade);
+	    
+	    }
+	   
+	}
+
+

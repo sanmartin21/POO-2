@@ -3,6 +3,7 @@ package atendimentoMedico;
 public class Especialidade {
 	
 	private String descricao;
+	
 
 	public String getDescricao() {
 		return descricao;
@@ -21,7 +22,7 @@ public class Especialidade {
 		builder.append("]");
 		return builder.toString();
 	}
-	
+
 	
 
 }
