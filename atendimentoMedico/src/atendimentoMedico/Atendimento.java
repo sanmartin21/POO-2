@@ -14,6 +14,10 @@ public class Atendimento extends Operacao {
 		this.paciente = paciente;
 
 	}
+	
+	public Atendimento() {
+		
+	}
 
 	public int getPrioridade() {
 		return prioridade;

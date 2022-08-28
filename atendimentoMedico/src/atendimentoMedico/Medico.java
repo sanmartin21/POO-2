@@ -12,6 +12,9 @@ public class Medico extends Pessoa{
 		especialidade = new Especialidade();
 	}
 	
+	public Medico() {
+		
+	}
 
 	public Especialidade getEspecialidade() {
 		return especialidade;
