@@ -86,43 +86,5 @@ public class Main {
 		medico1.setEspecialidade(especialidadeOftamologista);
 		listMedicos.add(medico3);
 		
-		
-		/*System.out.println("\n---------- ATENDIMENTO MÉDICO ----------\n");
-		
-		while(true) {
-			
-			System.out.println("----- MENU -----\n"
-					+ "1 - Médicos e especialidades\n"
-					+ "2 - Sair do programa");
-			int menuOp = entrada.nextInt();
-			
-				if(menuOp == 1) {
-					
-						System.out.println("O que deseja fazer?\n"
-								+ "1 - Acessar lista de médicos e especialidades\n"
-								+ "0 - Sair");
-						int medicoOp = entrada.nextInt();
-						
-						if(medicoOp == 1) {
-							System.out.println(" -- LISTA DE MÉDICOS E SUAS ESPECIALIDADES:");
-							for(int i = 0; i < listMedicos.size(); i++){
-							    System.out.println(listMedicos.get(i));
-							}	
-							System.out.println("\nDigite 0 para voltar");
-							int voltar = entrada.nextInt();
-						}
-						else {
-							continue;
-					}
-				if(menuOp == 2) {
-					System.out.println("\n Fim do programa.");
-					System.exit(0);
-				}
-					
-		}//while menu
-		
-
-	}*/
-
-}
+		}
 }

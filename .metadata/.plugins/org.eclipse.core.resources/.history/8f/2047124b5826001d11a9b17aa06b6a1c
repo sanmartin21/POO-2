@@ -1,9 +1,0 @@
-package atendimentoMedico;
-
-import java.util.Date;
-
-public class Paciente extends Pessoa{
-	
-
-
-}
