@@ -19,11 +19,9 @@ public class Atendimento extends Operacao {
 	public Atendimento() {
 		
 	}
-	public Atendimento(Paciente paciente,Medico medico, AtendimentoInterface interfaceAtendimento) {
+	public Atendimento(Paciente paciente,Medico medico) {
 	        this.medico = medico;
 	        this.paciente = paciente;
-	        this.calculaPrioridade(interfaceAtendimento);
-	        this.calculaEstado(interfaceAtendimento);
    }
 	 
 
