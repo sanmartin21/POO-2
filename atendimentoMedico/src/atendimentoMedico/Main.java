@@ -24,18 +24,24 @@ public class Main {
 		Medico med3 = new Medico(ofamologista, "Luis Augusto", "06/10/1995");
 		Medico med4 = new Medico(urologista, "Matheus", "05/05/2000");
 	
+		AtendimentoPortugues portugues = new AtendimentoPortugues();
+		AtendimentoIngles ingles = new AtendimentoIngles();
 
 		System.out.println("Selecione 1 para inicializar o projeto em Português e 2 para inicializar o projeto em Inglês");
 		System.out.println("Select 1 to initialize the project in Portuguese and 2 to initialize the project in English");
 		
 		Scanner input = new Scanner(System.in);
 		int selectorIdioma = input.nextInt();
+		
 
 		if (selectorIdioma == 1) {
 
-			AtendimentoPortugues ptbr = new AtendimentoPortugues();
-
-			Atendimento atendimento = new Atendimento(pac1, med1, ptbr);
+			AtendimentoGenerico atendimentoGenerico = new AtendimentoGenerico(portugues);
+			
+			System.out.println(atendimentoGenerico.calcularPrioridade());
+			int options = input.nextInt();
+			
+			Atendimento atendimento = new Atendimento(pac1, med1);
 			//medico auxiliar
 			atendimento.setMedico(med2);
 			atendimento.setInicio("27/08/2022 12:00");
@@ -44,9 +50,10 @@ public class Main {
 
 		} else if (selectorIdioma == 2) {
 
-			AtendimentoIngles en = new AtendimentoIngles();
-
-			Atendimento atendimento2 = new Atendimento(pac2, med3, en);
+			AtendimentoGenerico atendimentoGenerico = new AtendimentoGenerico(ingles);
+			atendimentoGenerico.calcularEstado();
+			
+			Atendimento atendimento2 = new Atendimento(pac2, med3);
 			//medico auxiliar
 			atendimento2.setMedico(med4);
 			atendimento2.setInicio("29/08/2021 16:00");

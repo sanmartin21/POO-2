@@ -1,44 +1,38 @@
 package atendimentoMedico;
 
-import java.util.Scanner;
 
 public class Atendimento extends Operacao {
 
-	private int prioridade;
-	private int estado;
+	private String prioridade;
+	private String estado;
 	protected Paciente paciente;
 	protected Medico medico;
 
-	public Atendimento(int prioridade, int estado, Paciente paciente) {
-		setPrioridade(prioridade);
-		setEstado(estado);
+	public Atendimento(Paciente paciente, Medico medico) {
 		this.paciente = paciente;
+		this.medico = medico;
 
 	}
 	
 	public Atendimento() {
 		
 	}
-	public Atendimento(Paciente paciente,Medico medico) {
-	        this.medico = medico;
-	        this.paciente = paciente;
-   }
 	 
 
 
-	public int getPrioridade() {
+	public String getPrioridade() {
 		return prioridade;
 	}
 
-	public void setPrioridade(int prioridade) {
-		this.prioridade = prioridade;
+	public void setPrioridade(String string) {
+		this.prioridade = string;
 	}
 
-	public int getEstado() {
+	public String getEstado() {
 		return estado;
 	}
 
-	public void setEstado(int estado) {
+	public void setEstado(String estado) {
 		this.estado = estado;
 	}
 
@@ -58,16 +52,47 @@ public class Atendimento extends Operacao {
 		this.medico = medico;
 	}
 
-	public void calculaPrioridade(AtendimentoInterface atendimentoInterface) {
-		System.out.println(atendimentoInterface.calculaEstado());
-        Scanner input = new Scanner(System.in);
-        this.estado = input.nextInt();
+	public void calculaPrioridade(int prioridade) {
+		if(prioridade == 1) {
+			this.setPrioridade("Não Urgente|Not Urgent");
+		}else if(prioridade == 2) {
+			this.setPrioridade("Pouco Urgente|Little Urgent");
+		}else if(prioridade == 3) {
+			this.setPrioridade("Urgente|Urgent");
+		}
+		else if(prioridade == 4) {
+			this.setPrioridade("Muito Urgente|Very Urgent");
+		}
+		else if(prioridade == 5) {
+			this.setPrioridade("Emergência|Emergency");
+		}
+		else {
+			this.setPrioridade(null);
+		}
+		
+		
     }
 	
-	 public void calculaEstado(AtendimentoInterface atendimentoInterface) {
-        System.out.println(atendimentoInterface.calculaEstado());
-        Scanner input = new Scanner(System.in);
-        this.estado = input.nextInt();
+	 public void calculaEstado(int estado) {
+
+		 if(estado == 1) {
+			 this.setEstado("Ferido|Injured");
+		 }
+		 else if(estado == 2) {
+			 this.setEstado("Sangrando|Bleeding");
+		 }
+		 else if(estado == 3) {
+			 this.setEstado("Com fraturas|With fractures");
+		 }
+		 else if(estado == 4) {
+			 this.setEstado("Desmaiado|Passed out");
+		 }
+		 else if(estado == 5) {
+			 this.setEstado("Decretado óbito|Death decree");
+		 }
+		 else {
+			 this.setEstado(null);
+		 }
     }
 	 
 

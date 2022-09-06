@@ -21,4 +21,6 @@ public class AtendimentoIngles implements AtendimentoInterface{
 		       		+ "4- Passed out\n"
 		       		+ "5- Death decree\n");
 	    }
+
+	
 }
