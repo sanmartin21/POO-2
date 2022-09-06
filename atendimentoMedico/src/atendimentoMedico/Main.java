@@ -40,6 +40,8 @@ public class Main {
 			
 			System.out.println(atendimentoGenerico.calcularPrioridade());
 			int options = input.nextInt();
+			System.out.println(atendimentoGenerico.calcularEstado()); 
+			options = input.nextInt();
 			
 			Atendimento atendimento = new Atendimento(pac1, med1);
 			//medico auxiliar
@@ -50,9 +52,12 @@ public class Main {
 
 		} else if (selectorIdioma == 2) {
 
-			AtendimentoGenerico atendimentoGenerico = new AtendimentoGenerico(ingles);
-			atendimentoGenerico.calcularEstado();
 			
+			AtendimentoGenerico atendimentoGenerico = new AtendimentoGenerico(ingles);
+			System.out.println(atendimentoGenerico.calcularPrioridade());
+			int options = input.nextInt();
+			System.out.println(atendimentoGenerico.calcularEstado()); 
+			options = input.nextInt();
 			Atendimento atendimento2 = new Atendimento(pac2, med3);
 			//medico auxiliar
 			atendimento2.setMedico(med4);
