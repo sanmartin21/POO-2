@@ -44,6 +44,8 @@ public class Main {
 			options = input.nextInt();
 			
 			Atendimento atendimento = new Atendimento(pacienteVitor, medicoPediatra);
+			atendimento.calculaEstado(options);
+			atendimento.calculaPrioridade(options);
 			//medico auxiliar
 			atendimento.setMedico(medicoCardiologista);
 			atendimento.setInicio("27/08/2022 12:00");
@@ -59,6 +61,8 @@ public class Main {
 			System.out.println(atendimentoGenerico.calcularEstado()); 
 			options = input.nextInt();
 			Atendimento atendimento2 = new Atendimento(pacienteCarlos, medicoOftamologista);
+			atendimento2.calculaEstado(options);
+			atendimento2.calculaPrioridade(options);
 			//medico auxiliar
 			atendimento2.setMedico(medicoUrologista);
 			atendimento2.setInicio("29/08/2021 16:00");
