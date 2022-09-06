@@ -7,8 +7,8 @@ public class Main {
 	public static void main(String[] args) {
 
 
-		Paciente pac1 = new Paciente("Rodrigo Fernandes", "10/03/2010");
-		Paciente pac2 = new Paciente("Pedro mata pombo", "12/09/2000");
+		Paciente pacienteVitor = new Paciente("Vitor Ricardo", "27/05/2000");
+		Paciente pacienteCarlos = new Paciente("Carlos Alexandre", "05/05/1994");
 		
 		Especialidade pediatria = new Especialidade();
 		pediatria.setDescricao("Pediatra");
@@ -19,10 +19,10 @@ public class Main {
 		Especialidade urologista = new Especialidade();
 		pediatria.setDescricao("Urologista");
 		
-		Medico med1 = new Medico(pediatria, "João Vitor", "21/02/2003");
-		Medico med2 = new Medico(cardiologia, "Jenifer", "05/06/1999");
-		Medico med3 = new Medico(ofamologista, "Luis Augusto", "06/10/1995");
-		Medico med4 = new Medico(urologista, "Matheus", "05/05/2000");
+		Medico medicoPediatra = new Medico(pediatria, "João Vitor", "21/02/2003");
+		Medico medicoCardiologista = new Medico(cardiologia, "Jenifer", "05/06/1999");
+		Medico medicoOftamologista = new Medico(ofamologista, "Luis Augusto", "06/10/1995");
+		Medico medicoUrologista = new Medico(urologista, "Matheus", "05/05/2000");
 	
 		AtendimentoPortugues portugues = new AtendimentoPortugues();
 		AtendimentoIngles ingles = new AtendimentoIngles();
@@ -43,9 +43,9 @@ public class Main {
 			System.out.println(atendimentoGenerico.calcularEstado()); 
 			options = input.nextInt();
 			
-			Atendimento atendimento = new Atendimento(pac1, med1);
+			Atendimento atendimento = new Atendimento(pacienteVitor, medicoPediatra);
 			//medico auxiliar
-			atendimento.setMedico(med2);
+			atendimento.setMedico(medicoCardiologista);
 			atendimento.setInicio("27/08/2022 12:00");
 			atendimento.setFim("27/08/2022 12:30");
 			System.out.println(atendimento);
@@ -58,9 +58,9 @@ public class Main {
 			int options = input.nextInt();
 			System.out.println(atendimentoGenerico.calcularEstado()); 
 			options = input.nextInt();
-			Atendimento atendimento2 = new Atendimento(pac2, med3);
+			Atendimento atendimento2 = new Atendimento(pacienteCarlos, medicoOftamologista);
 			//medico auxiliar
-			atendimento2.setMedico(med4);
+			atendimento2.setMedico(medicoUrologista);
 			atendimento2.setInicio("29/08/2021 16:00");
 			atendimento2.setFim("29/08/2021 17:00");
 			System.out.println(atendimento2);
