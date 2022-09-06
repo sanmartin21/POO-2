@@ -1,5 +1,8 @@
 package atendimentoMedico;
 
+
+import java.text.ParseException;
+import java.text.SimpleDateFormat;
 import java.util.ArrayList;
 import java.util.Collections;
 import java.util.Date;
@@ -8,6 +11,8 @@ import java.util.LinkedHashMap;
 import java.util.List;
 import java.util.Map;
 import java.util.concurrent.TimeUnit;
+import java.util.logging.Level;
+import java.util.logging.Logger;
 
 public class Operacao {
 
@@ -19,17 +24,25 @@ public class Operacao {
 		return inicio;
 	}
 	
-	public void setInicio(Date inicio) {
-		this.inicio = inicio;
-	}
+	public void setInicio(String inicio) {
+		try {
+            this.inicio = new SimpleDateFormat("dd/MM/yyyy HH:mm").parse(inicio);
+        } catch (ParseException ex) {
+            Logger.getLogger(Operacao.class.getName()).log(Level.SEVERE, null, ex);
+        }
+    }
 	
 	public Date getFim() {
 		return fim;
 	}
 	
-	public void setFim(Date fim) {
-		this.fim = fim;
-	}
+	public void setFim(String fim) {
+		try {
+            this.fim = new SimpleDateFormat("dd/MM/yyyy HH:mm").parse(fim);
+        } catch (ParseException ex) {
+            Logger.getLogger(Operacao.class.getName()).log(Level.SEVERE, null, ex);
+        }
+    }
 	
 	
 	public void tempoTotal(Date inicial, Date finall) {

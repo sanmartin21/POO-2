@@ -13,8 +13,6 @@
     <fullyQualifiedTypeName name="java.util.Collections"/>
     <fullyQualifiedTypeName name="java.util.EnumSet"/>
     <fullyQualifiedTypeName name="java.util.LinkedHashMap"/>
-    <fullyQualifiedTypeName name="java.text.ParseException"/>
-    <fullyQualifiedTypeName name="java.util.Scanner"/>
     <fullyQualifiedTypeName name="java.lang.System"/>
     <fullyQualifiedTypeName name="atendimentoMedico.Pessoa"/>
     <fullyQualifiedTypeName name="atendimentoMedico.Paciente"/>
@@ -27,7 +25,6 @@
     <fullyQualifiedTypeName name="java.util.List"/>
     <fullyQualifiedTypeName name="java.util.ArrayList"/>
     <fullyQualifiedTypeName name="atendimentoMedico.Medico"/>
-    <fullyQualifiedTypeName name="java.text.SimpleDateFormat"/>
     <fullyQualifiedTypeName name="injecaoDependencia.Notificacao"/>
     <fullyQualifiedTypeName name="injecaoDependencia.Alerta"/>
     <fullyQualifiedTypeName name="modeloTradicional.NotificacaoEmail"/>
@@ -43,6 +40,16 @@
     <fullyQualifiedTypeName name="atendimentoMedico.idiomaIngles"/>
     <fullyQualifiedTypeName name="java.util.Date"/>
     <fullyQualifiedTypeName name="java.lang.String"/>
-    <fullyQualifiedTypeName name="injecaoDependenciaPersistencia.Aluno"/>
     <fullyQualifiedTypeName name="injecaoDependenciaPersistencia.Persistencia.TipoPersistencia"/>
+    <fullyQualifiedTypeName name="injecaoDependenciaPersistencia.Aluno"/>
+    <fullyQualifiedTypeName name="injecaoDependenciaPersistencia.TipoPersistencia"/>
+    <fullyQualifiedTypeName name="java.text.SimpleDateFormat"/>
+    <fullyQualifiedTypeName name="java.text.ParseException"/>
+    <fullyQualifiedTypeName name="java.lang.System.Logger.Level"/>
+    <fullyQualifiedTypeName name="injecaoDependenciaPersistencia.Xml"/>
+    <fullyQualifiedTypeName name="injecaoDependenciaPersistencia.Json"/>
+    <fullyQualifiedTypeName name="injecaoDependenciaPersistencia.TipoPersistencia.Persistencias"/>
+    <fullyQualifiedTypeName name="atendimentoMedico.Idioma"/>
+    <fullyQualifiedTypeName name="java.util.Scanner"/>
+    <fullyQualifiedTypeName name="atendimentoMedico.AtendimentoInterface"/>
 </qualifiedTypeNameHistroy>

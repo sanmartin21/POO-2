@@ -1,5 +1,6 @@
 package atendimentoMedico;
 
+import java.util.Scanner;
 
 public class Atendimento extends Operacao {
 
@@ -18,6 +19,14 @@ public class Atendimento extends Operacao {
 	public Atendimento() {
 		
 	}
+	public Atendimento(Paciente paciente,Medico medico, AtendimentoInterface interfaceAtendimento) {
+	        this.medico = medico;
+	        this.paciente = paciente;
+	        this.calculaPrioridade(interfaceAtendimento);
+	        this.calculaEstado(interfaceAtendimento);
+   }
+	 
+
 
 	public int getPrioridade() {
 		return prioridade;
@@ -51,38 +60,18 @@ public class Atendimento extends Operacao {
 		this.medico = medico;
 	}
 
-	public void calculaPrioridade(boolean respostas[]) {
-		int prioridade = 0;
-		for (int i = 0; i < respostas.length; i++) {
-			if (respostas[i] = true) {
-				prioridade = i;
-			}
-
-		}
-		
-		if (prioridade == 0) {
-			System.out.println(prioridade + "- Cor azul (Não Urgente)");
-		}
-		
-		else if (prioridade == 1) {
-			System.out.println(prioridade + "- Cor verde (Pouco Urgente)");
-		}
-		
-		else if (prioridade == 2) {
-			System.out.println(prioridade + "- Cor Amarela (Urgente)");
-		}
-		
-		else if (prioridade == 3) {
-			System.out.println(prioridade + "- Cor Laranja (Muito Urgente)");
-		}
-		
-		else if (prioridade == 4) {
-			System.out.println(prioridade + "- Cor Vermelha (Emergência)");
-		}
-		else {
-			System.out.println("Prioridade não cadastrada!");
-		}
-	}
+	public void calculaPrioridade(AtendimentoInterface atendimentoInterface) {
+		System.out.println(atendimentoInterface.calculaEstado());
+        Scanner input = new Scanner(System.in);
+        this.estado = input.nextInt();
+    }
+	
+	 public void calculaEstado(AtendimentoInterface atendimentoInterface) {
+        System.out.println(atendimentoInterface.calculaEstado());
+        Scanner input = new Scanner(System.in);
+        this.estado = input.nextInt();
+    }
+	 
 
 	@Override
 	public String toString() {

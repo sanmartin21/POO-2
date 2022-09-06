@@ -6,9 +6,9 @@ public class Medico extends Pessoa{
 	
 	protected Especialidade especialidade;
 	
-	public Medico(Especialidade especialidade, String nome, Date dataNascimento) {
+	public Medico(Especialidade especialidade, String nome, String dataNascimento) {
 		setNome(nome);
-		setDataNascimento(dataNascimento);
+		this.setDataNascimento(dataNascimento);
 		especialidade = new Especialidade();
 	}
 	

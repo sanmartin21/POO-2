@@ -1,90 +1,63 @@
 package atendimentoMedico;
 
-import java.text.DateFormat;
-import java.text.ParseException;
-import java.text.SimpleDateFormat;
-import java.util.ArrayList;
-import java.util.Date;
-import java.util.List;
 import java.util.Scanner;
 
 public class Main {
 
-	public static void main(String[] args) throws ParseException{
+	public static void main(String[] args) {
+
+
+		Paciente pac1 = new Paciente("Rodrigo Fernandes", "10/03/2010");
+		Paciente pac2 = new Paciente("Pedro mata pombo", "12/09/2000");
 		
-		Scanner entrada = new Scanner(System.in);
+		Especialidade pediatria = new Especialidade();
+		pediatria.setDescricao("Pediatra");
+		Especialidade cardiologia = new Especialidade();
+		pediatria.setDescricao("Cardiologista");
+		Especialidade ofamologista = new Especialidade();
+		pediatria.setDescricao("Oftamologista");
+		Especialidade urologista = new Especialidade();
+		pediatria.setDescricao("Urologista");
 		
-		Pessoa pessoa = new Pessoa();
-		Paciente paciente = new Paciente();
-		
-		DateFormat dateFormat = new SimpleDateFormat("dd/MM/yyyy");
-		
-		Paciente paciente1 = new Paciente();
-		paciente1.setNome("João");
-		String dataPaciente1 = "21/02/2003";
-		
-		SimpleDateFormat formatar = new SimpleDateFormat("dd/MM/yyyy");
-		Date dataFormatada = formatar.parse(dataPaciente1);
-		paciente1.setDataNascimento(dataFormatada);
-		
-		
+		Medico med1 = new Medico(pediatria, "João Vitor", "21/02/2003");
+		Medico med2 = new Medico(cardiologia, "Jenifer", "05/06/1999");
+		Medico med3 = new Medico(ofamologista, "Luis Augusto", "06/10/1995");
+		Medico med4 = new Medico(urologista, "Matheus", "05/05/2000");
 	
-		Paciente paciente2 = new Paciente();
-		paciente2.setNome("João");
-		String dataPaciente2 = "21/02/2003";
-		SimpleDateFormat formatar2 = new SimpleDateFormat("dd/MM/yyyy");
-		Date dataFormatada2 = formatar2.parse(dataPaciente2);
-		paciente2.setDataNascimento(dataFormatada2);
+
+		System.out.println("Selecione 1 para inicializar o projeto em Português e 2 para inicializar o projeto em Inglês");
+		System.out.println("Select 1 to initialize the project in Portuguese and 2 to initialize the project in English");
 		
-		Paciente paciente3 = new Paciente();
-		paciente3.setNome("João");
-		String dataPaciente3 = "21/02/2003";
-		SimpleDateFormat formatar3 = new SimpleDateFormat("dd/MM/yyyy");
-		Date dataFormatada3 = formatar3.parse(dataPaciente3);
-		paciente3.setDataNascimento(dataFormatada3);
-		
-		Atendimento atendimento = new Atendimento();
-		
-		Operacao operacao = new Operacao();		
-		
-		Atestado atestado = new Atestado();
-		
-		ListaAtendimento listaAtendimento = new ListaAtendimento();
-		
-		Especialidade especialidadeCirurgiaoGeral = new Especialidade();
-		especialidadeCirurgiaoGeral.setDescricao("Cirurgião Geral");
-		Especialidade especialidadeOftamologista = new Especialidade();
-		especialidadeOftamologista.setDescricao("Oftamologista.");
-		Especialidade especialidadePediatria= new Especialidade();
-		especialidadePediatria.setDescricao("Pediatra.");
-		
-		
-		List<Medico> listMedicos = new ArrayList<>();
-		Medico medico1 = new Medico();
-		SimpleDateFormat formatar4 = new SimpleDateFormat("dd/MM/yyyy");
-		java.util.Date dataMedico = formatar4.parse("06/10/2010");
-		medico1.setNome("Ricardo");
-		medico1.setDataNascimento(dataMedico);
-		medico1.setEspecialidade(especialidadePediatria);
-		listMedicos.add(medico1);
-		
-		
-		Medico medico2 = new Medico();
-		SimpleDateFormat formatar5 = new SimpleDateFormat("dd/MM/yyyy");
-		java.util.Date dataMedico2 = formatar5.parse("24/05/1979");
-		medico1.setNome("Jean");
-		medico1.setDataNascimento(dataMedico2);
-		medico1.setEspecialidade(especialidadeOftamologista);
-		listMedicos.add(medico2);
-		
-		
-		Medico medico3 = new Medico();
-		SimpleDateFormat formatar6 = new SimpleDateFormat("dd/MM/yyyy");
-		java.util.Date dataMedico3 = formatar6.parse("08/10/2000");
-		medico1.setNome("Jean");
-		medico1.setDataNascimento(dataMedico3);
-		medico1.setEspecialidade(especialidadeOftamologista);
-		listMedicos.add(medico3);
-		
+		Scanner input = new Scanner(System.in);
+		int selectorIdioma = input.nextInt();
+
+		if (selectorIdioma == 1) {
+
+			AtendimentoPortugues ptbr = new AtendimentoPortugues();
+
+			Atendimento atendimento = new Atendimento(pac1, med1, ptbr);
+			//medico auxiliar
+			atendimento.setMedico(med2);
+			atendimento.setInicio("27/08/2022 12:00");
+			atendimento.setFim("27/08/2022 12:30");
+			System.out.println(atendimento);
+
+		} else if (selectorIdioma == 2) {
+
+			AtendimentoIngles en = new AtendimentoIngles();
+
+			Atendimento atendimento2 = new Atendimento(pac2, med3, en);
+			//medico auxiliar
+			atendimento2.setMedico(med4);
+			atendimento2.setInicio("29/08/2021 16:00");
+			atendimento2.setFim("29/08/2021 17:00");
+			System.out.println(atendimento2);
+
 		}
+
+		else {
+			System.out.println("Opção inválida!");
+		}
+
+	}
 }
