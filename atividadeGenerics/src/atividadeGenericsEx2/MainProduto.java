@@ -1,4 +1,4 @@
-package atividadeGerericsEx2;
+package atividadeGenericsEx2;
 
 public class MainProduto {
 
