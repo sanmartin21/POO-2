@@ -1,4 +1,4 @@
-package atividadeGenerics;
+package atividadeGenericsEx1;
 
 public class Aluno {
 	
