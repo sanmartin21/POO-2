@@ -3,7 +3,7 @@ package atividadeGenericsEx3;
 import java.util.ArrayList;
 import java.util.List;
 
-public class Pedido <T>{
+public class Pedido <T extends ProdutoX>{
 	
 	List<T> listProdutos = new ArrayList<T>();
 

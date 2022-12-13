@@ -1,0 +1,8 @@
+content_assist_lru_history=<?xml version\="1.0" encoding\="UTF-8" standalone\="no"?><history maxLHS\="100" maxRHS\="10"><lhs name\="Adapter.DBAdapter"><rhs name\="Adapter.OracleComands"/><rhs name\="Adapter.MySQLAdapter"/></lhs><lhs name\="Adapter.OracleComands"><rhs name\="Adapter.OracleComands"/></lhs><lhs name\="Adapter.MySQLComands"><rhs name\="Adapter.MySQLComands"/></lhs><lhs name\="Adapter.MySQLAdapter"><rhs name\="Adapter.MySQLAdapter"/></lhs></history>
+content_assist_number_of_computers=12
+eclipse.preferences.version=1
+org.eclipse.jdt.ui.formatterprofiles.version=21
+spelling_locale_initialized=true
+typefilter_migrated=true
+useAnnotationsPrefPage=true
+useQuickDiffPrefPage=true

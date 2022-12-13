@@ -7,6 +7,7 @@ public class Main {
 
 		VerificaChaveValor<String> verificaChaveValor = new VerificaChaveValor<>();
 		verificaChaveValor.add("1234", "231321");
+		verificaChaveValor.add("1234", "231321");
 		verificaChaveValor.add("3312", "123123");
 		
 		

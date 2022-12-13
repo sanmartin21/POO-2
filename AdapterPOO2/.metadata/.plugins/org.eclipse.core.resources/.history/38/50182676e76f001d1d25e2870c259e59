@@ -1,0 +1,27 @@
+package Adapter;
+
+public class MySQLAdapter implements DBAdapter{
+
+	private MySQLComands MySQL;
+	
+	//construtor
+	public MySQLAdapter(MySQLComands MySQL) {
+		this.MySQL = MySQL;
+	}
+	
+	
+	//Odaptador servirá apenas para fazer as conversões
+	public String insert() {
+		return this.MySQL.insertMySQL();
+	}
+	
+	public String update() {	
+		return this.MySQL.updateMySQL();
+	}
+	
+	public String delete() {	
+		return this.MySQL.deleteMySQL();		
+	}
+	
+	
+}

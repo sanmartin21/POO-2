@@ -1,6 +1,5 @@
 package atividadeGenericsEx1;
 
-import java.util.Scanner;
 
 public class MainEx1 {
 

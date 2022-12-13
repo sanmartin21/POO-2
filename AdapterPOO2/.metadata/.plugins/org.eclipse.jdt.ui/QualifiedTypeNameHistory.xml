@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<qualifiedTypeNameHistroy>
+    <fullyQualifiedTypeName name="java.util.function.Function"/>
+    <fullyQualifiedTypeName name="Adapter.OracleComands"/>
+    <fullyQualifiedTypeName name="Adapter.DBAdapter"/>
+    <fullyQualifiedTypeName name="Adapter.MySQLComands"/>
+    <fullyQualifiedTypeName name="Adapter.MySQLAdapter"/>
+</qualifiedTypeNameHistroy>

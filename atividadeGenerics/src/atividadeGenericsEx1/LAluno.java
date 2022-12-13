@@ -3,7 +3,7 @@ package atividadeGenericsEx1;
 public class LAluno<T> {
 	
 	private T t;
-	
+
 	public void add(T t) {
         this.t = t;
       }
